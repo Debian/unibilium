@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/architecture.mk
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_install:
+	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp PREFIX=/usr LIBDIR='$${PREFIX}/lib/$(DEB_HOST_MULTIARCH)' install
+
+override_dh_strip:
+	dh_strip --dbg-package=libunibilium-dbg

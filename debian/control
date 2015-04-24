@@ -1,0 +1,34 @@
+Source: unibilium
+Priority: extra
+Maintainer: James McCoy <jamessan@debian.org>
+Build-Depends: debhelper (>= 9), libtool-bin, perl
+Standards-Version: 3.9.6
+Section: libs
+Homepage: https://github.com/mauke/unibilium
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/unibilium.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/unibilium.git/
+
+Package: libunibilium-dev
+Section: libdevel
+Architecture: any
+Depends: libunibilium0 (= ${binary:Version}), ${misc:Depends}
+Description: simple, self-contained terminfo library (development files)
+ This package contains the header files and documentation needed for developing
+ with libunibilium.
+
+Package: libunibilium0
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple, self-contained terminfo library
+ Unibilium is a very basic terminfo library. It doesn't depend on curses or any
+ other library. It also doesn't use global variables, so it should be
+ thread-safe.
+
+Package: libunibilium-dbg
+Section: debug
+Architecture: any
+Depends: libunibilium0 (= ${binary:Version})
+Description: simple, self-contained terminfo library (debug symbols)
+ This package contains the detach debug symbols for libunibilium.
