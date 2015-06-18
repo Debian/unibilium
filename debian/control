@@ -27,8 +27,10 @@ Description: simple, self-contained terminfo library
  thread-safe.
 
 Package: libunibilium-dbg
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
 Section: debug
 Architecture: any
-Depends: libunibilium0 (= ${binary:Version})
+Depends: libunibilium0 (= ${binary:Version}), ${misc:Depends}
 Description: simple, self-contained terminfo library (debug symbols)
  This package contains the detach debug symbols for libunibilium.
