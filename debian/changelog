@@ -1,3 +1,9 @@
+unibilium (1.1.4-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- James McCoy <jamessan@debian.org>  Wed, 17 Jun 2015 23:01:50 -0400
+
 unibilium (1.1.3-1) unstable; urgency=medium
 
   * Initial upload. (Closes: #783043)
