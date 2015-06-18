@@ -1,10 +1,14 @@
+ifneq ($(wildcard .git),)
+  -include maint.mk
+endif
+
 ifeq ($(shell uname),Darwin)
   LIBTOOL?=glibtool
 else
   LIBTOOL?=libtool
 endif
 
-CFLAGS?=
+CFLAGS?=-O2
 
 CFLAGS_DEBUG=
 
@@ -12,7 +16,7 @@ PACKAGE=unibilium
 
 PKG_MAJOR=1
 PKG_MINOR=1
-PKG_REVISION=3
+PKG_REVISION=4
 
 PKG_VERSION=$(PKG_MAJOR).$(PKG_MINOR).$(PKG_REVISION)
 
@@ -59,13 +63,13 @@ uniutil.lo: uniutil.c unibilium.h
 	$(LIBTOOL) --mode=compile --tag=CC $(CC) -I. -DTERMINFO_DIRS='$(TERMINFO_DIRS)' -Wall -std=c99 $(CFLAGS) $(CFLAGS_DEBUG) -o $@ -c $<
 
 $(LIBRARY): $(OBJECTS)
-	$(LIBTOOL) --mode=link --tag=CC $(CC) -rpath '$(LIBDIR)' -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -o $@ $^
+	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LDFLAGS) -rpath '$(LIBDIR)' -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -o $@ $^
 
 tools/%: $(LIBRARY) tools/%.lo
-	$(LIBTOOL) --mode=link --tag=CC $(CC) -o $@ $^
+	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LDFLAGS) -o $@ $^
 
 %.t: $(LIBRARY) %.lo
-	$(LIBTOOL) --mode=link --tag=CC $(CC) -o $@ $^
+	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LDFLAGS) -o $@ $^
 
 .PHONY: build-tools
 build-tools: $(TOOLS:.c=)
