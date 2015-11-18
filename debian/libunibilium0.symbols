@@ -32,6 +32,7 @@ libunibilium.so.0 libunibilium0 #MINVER#
  unibi_name_bool@Base 1.0
  unibi_name_num@Base 1.0
  unibi_name_str@Base 1.0
+ unibi_num_from_var@Base 1.2
  unibi_run@Base 1.1
  unibi_set_aliases@Base 1.0
  unibi_set_bool@Base 1.0
@@ -47,4 +48,7 @@ libunibilium.so.0 libunibilium0 #MINVER#
  unibi_short_name_bool@Base 1.0
  unibi_short_name_num@Base 1.0
  unibi_short_name_str@Base 1.0
+ unibi_str_from_var@Base 1.2
  unibi_terminfo_dirs@Base 1.0
+ unibi_var_from_num@Base 1.2
+ unibi_var_from_str@Base 1.2
