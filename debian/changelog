@@ -4,6 +4,7 @@ unibilium (1.2.1-1) UNRELEASED; urgency=medium
   * Bump debhelper compat to 10
   * Migrate to automatic debug packages
   * Enable hardening build flags
+  * Declare compliance with Policy 4.1.0, no changes needed
 
  -- James McCoy <jamessan@debian.org>  Thu, 14 Sep 2017 21:00:04 -0400
 
