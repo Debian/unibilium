@@ -1,7 +1,7 @@
 Source: unibilium
 Priority: extra
 Maintainer: James McCoy <jamessan@debian.org>
-Build-Depends: debhelper (>= 9), libtool-bin, perl
+Build-Depends: debhelper (>= 10), libtool-bin, perl
 Standards-Version: 3.9.6
 Section: libs
 Homepage: https://github.com/mauke/unibilium

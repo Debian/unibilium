@@ -1,10 +1,9 @@
 #!/usr/bin/make -f
 
-include /usr/share/dpkg/architecture.mk
-include /usr/share/dpkg/buildflags.mk
+include /usr/share/dpkg/default.mk
 
 %:
-	dh $@ --parallel
+	dh $@
 
 override_dh_auto_build:
 	$(MAKE) CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)"
