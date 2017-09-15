@@ -25,12 +25,3 @@ Description: simple, self-contained terminfo library
  Unibilium is a very basic terminfo library. It doesn't depend on curses or any
  other library. It also doesn't use global variables, so it should be
  thread-safe.
-
-Package: libunibilium-dbg
-Pre-Depends: ${misc:Pre-Depends}
-Multi-Arch: same
-Section: debug
-Architecture: any
-Depends: libunibilium0 (= ${binary:Version}), ${misc:Depends}
-Description: simple, self-contained terminfo library (debug symbols)
- This package contains the detach debug symbols for libunibilium.
