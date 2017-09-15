@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: unibilium
 Source: https://github.com/mauke/unibilium
 
@@ -11,7 +11,7 @@ Copyright: 2011-2012,2015 Lukas Mai
 License: MIT
 
 Files: debian/*
-Copyright: 2015 James McCoy <jamessan@debian.org>
+Copyright: 2015-2017 James McCoy <jamessan@debian.org>
 License: MIT
 
 License: LGPL-3+
